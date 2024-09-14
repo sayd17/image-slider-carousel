@@ -1,0 +1,61 @@
+<script>
+    import Carousel from "svelte-carousel";
+    export let images;
+    let carousel;
+
+    const handleNextClick = () => {
+        carousel.goToNext();
+    }
+    
+    const handlePrevClick = () => {
+        carousel.goToPrev();
+    }
+</script>
+
+<Carousel 
+    pauseOnFocus
+    autoplay
+    autoplayDuration={2000}
+    autoplayProgressVisible
+    bind:this={carousel}
+>
+    <button slot="prev" on:click={handlePrevClick} class="custom-button left-radius">
+        {'< '}
+    </button>
+
+    {#each images as image, index (index)}
+        <div><img src={image.src} alt={image.desc} width="100%" height="400" /></div>
+    {/each}
+
+    <button slot="next" on:click={handleNextClick} class="custom-button right-radius">
+        {' >'}
+    </button>
+</Carousel>
+
+<style>
+    div {
+        text-align: center;
+    }
+    .custom-button {
+        background-color: var(--button-bg-color);
+        color: var(--button-text-color);
+        padding: var(--button-padding);
+        font-size: var(--button-font-size);
+        border: var(--button-border);
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .left-radius {
+        border-top-left-radius: var(--border-top-left-radius);
+        border-bottom-left-radius: var(--border-bottom-left-radius);
+    }
+    .right-radius {
+        border-top-right-radius: var(--border-top-right-radius);
+        border-bottom-right-radius: var(--border-bottom-right-radius);
+    }
+
+  .custom-button:hover {
+    background-color: var(--button-hover-bg-color);
+  }
+</style>

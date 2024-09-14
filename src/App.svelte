@@ -1,29 +1,42 @@
 <script>
-	import SvelteCarousel from './carousels/SvelteCarousel.svelte'
+	import SvelteCarousel from './components/SvelteCarousel.svelte'
 
 	const images = [
 		{
-			src: 'https://media.istockphoto.com/id/1265024528/photo/no-better-adventure-buddy.jpg?s=1024x1024&w=is&k=20&c=tObIEgQAXKm_OQwuZ0xNXA-U0QMXx2Okgm_L6Ew9Ygk=',
-            desc: 'Adventure buddy'
-		},
-		{
-			src: 'https://media.istockphoto.com/id/1322104312/photo/freedom-chains-that-transform-into-birds-charge-concept.jpg?s=1024x1024&w=is&k=20&c=CoqB4hDuRFuxxEZ4Fu84uhLDftgeyAtl8TXEQq-JdtM=',
-            desc: 'Freedom chain'
+			src: 'https://plus.unsplash.com/premium_photo-1681584472513-9f1f33f3928a?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+            desc: 'Inspiration board'
         },
 		{
-			src: 'https://media.istockphoto.com/id/121199853/photo/closeup-of-guy-working-on-a-laptop-indoor.jpg?s=1024x1024&w=is&k=20&c=0uAngvDAolHrh_LUWorV6ZJD5AVO6g2tfavtw9PPHYQ=',
-            desc: 'Working on a laptop indoor'
-        }
+			src: 'https://plus.unsplash.com/premium_photo-1681680199227-b456408ae2f9?q=80&w=1413&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+            desc: 'Art Mockup'
+        },
+		{
+			src: 'https://plus.unsplash.com/premium_photo-1681680198696-7bb0b3fdda0d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+            desc: 'Paper-background'
+        },
+		{
+			src: 'https://plus.unsplash.com/premium_photo-1722945688629-0d31e4850b24?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+            desc: 'Fishes walmate frame'
+        },
+		{
+			src: 'https://plus.unsplash.com/premium_photo-1664391914821-29ee0b3d98ee?q=80&w=1510&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+            desc: 'Interior design'
+        },
+		
 	];
 
 </script>
 
 <main>
-	
+	<h1>Image Carousel</h1>
 	<SvelteCarousel images={images} />
 
 </main>
 
 <style>
+	h1 {
+		text-align: center;
+		text-decoration: underline;
+	}
 
 </style>
