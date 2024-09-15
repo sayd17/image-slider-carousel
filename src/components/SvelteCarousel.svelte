@@ -15,12 +15,12 @@
 <Carousel 
     pauseOnFocus
     autoplay
-    autoplayDuration={2000}
+    autoplayDuration={3000}
     autoplayProgressVisible
     bind:this={carousel}
 >
     <button slot="prev" on:click={handlePrevClick} class="custom-button left-radius">
-        {'< '}
+        <img src="/assets/arrow-left.png" alt="left arrow" width="15px" height="15px" />
     </button>
 
     {#each images as image, index (index)}
@@ -28,7 +28,7 @@
     {/each}
 
     <button slot="next" on:click={handleNextClick} class="custom-button right-radius">
-        {' >'}
+        <img src="/assets/arrow-right.png" alt="right arrow" width="15px" height="15px" />
     </button>
 </Carousel>
 
