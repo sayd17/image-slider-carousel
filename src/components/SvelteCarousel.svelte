@@ -1,5 +1,6 @@
 <script>
     import Carousel from "svelte-carousel";
+    import CustomDot from "./CustomDot.svelte";
     export let images;
     let carousel;
     let hidden = true;
@@ -20,12 +21,28 @@
     autoplayProgressVisible
     bind:this={carousel}
     let:loaded
+    let:currentPageIndex
+    let:pagesCount
+    let:showPage
+    
 >
     <button on:mouseenter={() => hidden = false} on:mouseleave={() => hidden=true} slot="prev" on:click={handlePrevClick} class={`${hidden ? 'hide-element' : ''} custom-button left-radius`}>
         
         <img src="/assets/arrow-left.png" alt="left arrow" width="15px" height="15px" />
     
     </button>
+
+    <div slot="dots">
+
+        {#each  Array(pagesCount) as _, pageIndex (pageIndex)}
+        
+            <CustomDot on:click={showPage(pageIndex)} active={currentPageIndex === pageIndex}>
+                {pageIndex}
+            </CustomDot>
+
+        {/each}
+      
+    </div>
 
     {#each images as image, index}
 
