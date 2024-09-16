@@ -13,7 +13,7 @@ This project demonstrates the implementation of a responsive image carousel usin
 ## Prerequisites
 Before you begin, ensure you have the following installed on your machine:
 
-- Node.js (v14 or higher)
+- Node.js (v16 or higher)
 - npm (comes with Node.js)
 
 ## Installation
